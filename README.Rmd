@@ -1,0 +1,8 @@
+---
+title: "README"
+author: "A.Kineyev"
+date: "9/17/2020"
+output: word_document
+---
+ You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
+ README.rmd included to repo. Explanation of how all of the script work in the codebook.rmd file. Here only one script, so no connection to other could not be.

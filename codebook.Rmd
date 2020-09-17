@@ -1,0 +1,45 @@
+---
+title: "code book"
+author: "A.Kineyev"
+date: "9/17/2020"
+output: word_document
+---
+Actually I try to make describtive comments in my script, so I wrote this code book by my comments. Sorry for my English, it's my third language and I have not enough practice.
+And extension of my code book are rmd, because I use macbook.
+
+Load needed library (dplyr package)
+
+Set correct path to the folder with datasets, I previously downloaded it by link, because I didn't see in tasks that script need to download it.
+I use folder - /Users/asset/Documents/data/R text/Cleaning data/course3project/UCI HAR Dataset
+If you will run my script:
+1. download dataset (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+2. change setwd for your current folder
+
+
+Read all tables with the assigned column names, column names I take from describtion of dataset.
+I create volunteer_test and volunteer_train data frames with "volunteer" column's name.
+
+We will use this activities codes from each group with codes from activity_label.txt. I create two data frames with activities codes from each group with column name "code"
+Read dataset with measurements of each groups to two data frames (x_test and x_train variables). 
+Take column names from features.txt file to the "features" variable.
+
+Merging measurement's datasets from each groups by rbinb function.
+Do same for the activities codes data frames from each groups.
+
+Create merged volunteers list in one data frame from two groups. 
+Bind measurements, activities, and volunteers in one data frame with "total_data" name. 
+TASK 1 COMPLETED!
+
+Extracting only the mean and standard deviation with "select" function for each measurement to the "clean_data". 
+TASK 2 COMPLETED!
+
+Create "activities" table with same codes from activity_labels.txt file and changing codes to the activities names in "clean_data" variables. 
+TASK 3 COMPLETED! 
+
+
+Make describtive names for variables in "clean_data". I take names from features_info.txt from downloaded dataset.
+TASK 4 COMPLETED!
+
+
+Create the second data set with the average of each variable for each activity and each volunteer.
+TASK 5 COMPLETED!
